@@ -21,27 +21,22 @@ $.ajax(
 
 // delete
 
-$("#list").on("click", ".delete", function(){
+$("#list").on("click", ".delete", function(){ 
 
 var elm = $(this).parent();
 var id = elm.attr("id");
 
-}
+$.ajax(
+  {
+    "url": "http://157.230.17.132:3019/todos",
+    "method": "DELETE",
+    "success": function(data){
+      elm.remove();
+    },
+    "error": function() {
+      alert("error");
+    }
 
-
-
-
-
-
-
-
-
-)
-
-
-
-
-
-
-
+  }
+);
 });
