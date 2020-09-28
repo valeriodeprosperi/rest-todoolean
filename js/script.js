@@ -73,6 +73,24 @@ function render(data){
 
   for (var i = 0; i < data.length; i++) {
     var context = {
+      "id" : data[i].id,
+      "text" :data[i].text
+    }
+  }
+
+
+  var html = template(context);
+
+  $("#list").append(html);
+
+}
+
+function addElement(data){
+  var source = $("#elm-template").html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i < data.length; i++) {
+    var context = {
       "id" : data.id,
       "text" :data.text
     }
