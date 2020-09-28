@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
 
-  // ready
+  // read
 
 $.ajax(
 {

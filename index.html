@@ -10,8 +10,11 @@
     <h1>Todo List</h1>
     <ul id="list"></ul>
     <input id="input-add-element" type="text" placeholder="new element">
-    <button class="add-todo"></button>
-    
+    <button class="add-todo">aggiungi</button>
+
+    <script id="elm-template" type="text/x-handlebars-template">
+      <li id="{{id}}">{{text}} <span class="delete">X</span></li>
+    </script>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
