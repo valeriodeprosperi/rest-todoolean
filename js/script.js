@@ -19,6 +19,26 @@ $.ajax(
 
 });
 
+// delete
+
+$("#list").on("click", ".delete", function(){
+
+var elm = $(this).parent();
+var id = elm.attr("id");
+
+}
+
+
+
+
+
+
+
+
+
+)
+
+
 
 
 
