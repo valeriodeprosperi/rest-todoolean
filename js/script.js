@@ -21,7 +21,7 @@ $.ajax(
 
 // delete
 
-$("#list").on("click", ".delete", function(){ 
+$("#list").on("click", ".delete", function(){
 
 var elm = $(this).parent();
 var id = elm.attr("id");
@@ -39,4 +39,30 @@ $.ajax(
 
   }
 );
+});
+});
+
+
+// create
+$(".add-todo").click(function(){
+
+var val = $("#input-add-element").val();
+
+if(val != ""){
+
+  $.ajax( {
+    "url": "http://157.230.17.132:3019/todos",
+    "method": "POST",
+    "data": {
+      "text": val
+    },
+    "success": function(data){
+      addElement(data);
+    },
+    "error":function(){
+      alert("error");
+    }
+  });
+}
+
 });
