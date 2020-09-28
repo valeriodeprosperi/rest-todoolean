@@ -66,3 +66,21 @@ if(val != ""){
 }
 
 });
+
+function render(data){
+  var source = $("#elm-template").html();
+  var template = Handlebars.compile(source);
+
+  for (var i = 0; i < data.length; i++) {
+    var context = {
+      "id" : data.id,
+      "text" :data.text
+    }
+  }
+
+
+  var html = template(context);
+
+  $("#list").append(html);
+
+}
